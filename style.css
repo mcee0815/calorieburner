@@ -1,56 +1,74 @@
 body{
+    margin: 0;
+    padding: 0;
+}
+body{
     font-family: 'Roboto', sans-serif;
     font-size:20px;
     color:white;
+    background: royalblue;
   }
-  .itemBox{
-    display:flex;
+
+ 
+  @media only screen and (max-width: 500px) {
+    .wrapper{
+        /* display: flex;
+        flex-direction: column; */
+        
+        /* height: 700px;  */
+        /* justify-content: space-between;   */
+    }
+  }
+  .wrapper{
+    padding: 13px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /* background: royalblue; */
     justify-content: center;
-    flex-direction: column;
-    align-items:center;
-    border-radius:4px;
-    height:110px;
-    width:170px;
-    background-color:purple;
-    margin:5px
+    height: 100vh;
   }
+  .step{
+      background-color:blueviolet;
+      padding: 5px 40px;
+      margin-bottom: 10px;
+  }
+  .step .number{
+      font-size: xx-large;
+  }
+  .itemBox,.result-box,.button-box{
+    box-sizing: border-box;
+    padding-top: 25px;
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    height: 254px;
+    width: 170px;
+    background-color: purple;
+    margin: 5px;
+  }
+  @media only screen and (min-width: 468px) {
+    
+  }
+
   .gender-male,.gender-female{
     display:flex;
-    margin:10px;
-  /*    */
-  }
-  .button-box{
-    display:flex;
-    flex-direction:column;
-    align-items:stretch;
-    justify-content:center;
-    border-radius:4px;
-    height:99px;
-    width:170px;
-    background-color:purple;
-    margin:5px
-  }
-  .result-box{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-    border-radius:4px;
-    color:white;
-    height:70px;
-    width:170px;
-    background-color:purple;
-    margin:5px
+    /* margin:10px; */
   }
   .itemBox,.button-box,.result-box{
     box-shadow: 6px 6px 2px 1px rgba(0, 0, 255, .2);
   }
   
   button{
-    margin:6px;
-    border-radius:4px;
-    padding:5px;
-    font-size:20px;
+    margin: 6px;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 20px;
+    width: 105px;
+    box-sizing: border-box;
   }
   label{
     margin:8px;

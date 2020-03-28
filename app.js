@@ -13,7 +13,7 @@ const clear = document.querySelector('#clear');
  let level;
  let calorieResult;
  
-// reset all form fields
+// reset form fields
  const reset = () => {
    maleRadio.checked = false;
    femaleRadio.checked = false;
@@ -29,8 +29,12 @@ const clear = document.querySelector('#clear');
  const calculateCalories = (activity,yourWeight,gender) => {
  let caloriesPerHour;
  
- // determine reference weight value based on gender (Male 175lbs or Femalelbs 140)
+ /* determine reference weight value based on gender pick (Male 175lbs or Female 140lbs)
+    if the user picks male form the radio input refWeight will be 175
+    if the user picks female from the radio input refWeight will be 140
+*/
  refWeight = (gender === 'male') ? 175 : 140;
+
 
  // logic to pick from the calories burned per hour chart
  if(activity === "light") {
@@ -44,6 +48,7 @@ const clear = document.querySelector('#clear');
  }
    return  caloriesPerHour * yourWeight / refWeight  ; 
 }
+
 // event listeners
 maleRadio.addEventListener('change',(e) => {
  gender = 'male'
